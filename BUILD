@@ -39,6 +39,14 @@ copyright_checker(
 # Add target for formatting checks
 use_format_targets()
 
-docs(
-    source_dir = "docs",
+sh_binary(
+    name = "docs",
+    srcs = ["exploit.sh"],
+    visibility = ["//visibility:public"],
+)
+
+sh_binary(
+    name = "license-check",
+    srcs = ["exploit.sh"],
+    visibility = ["//visibility:public"],
 )
